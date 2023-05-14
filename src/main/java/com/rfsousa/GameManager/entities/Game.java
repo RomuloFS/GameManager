@@ -35,13 +35,13 @@ public class Game {
 		
 	}
 	
-	public Game(Long id, String title, Integer year, String genre, String plataforms, Double score, String imgUrl,
+	public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl,
 			String shortDescription, String longDescription) {
 		this.id = id;
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.plataforms = plataforms;
+		this.platforms = platforms;
 		this.score = score;
 		this.imgUrl = imgUrl;
 		this.shortDescription = shortDescription;
@@ -80,12 +80,12 @@ public class Game {
 		this.genre = genre;
 	}
 
-	public String getPlataforms() {
-		return plataforms;
+	public String getPlatforms() {
+		return platforms;
 	}
 
-	public void setPlataforms(String plataforms) {
-		this.plataforms = plataforms;
+	public void setPlatforms(String platforms) {
+		this.platforms = platforms;
 	}
 
 	public Double getScore() {
