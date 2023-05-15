@@ -1,6 +1,7 @@
 package com.rfsousa.GameManager.dto;
 
 import com.rfsousa.GameManager.entities.Game;
+import com.rfsousa.GameManager.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -15,12 +16,19 @@ public class GameMinDTO {
 	}
 
 	public GameMinDTO(Game game) {
-		super();
-		this.id = game.getId();
-		this.title = game.getTitle();
-		this.year = game.getYear();
-		this.imgUrl = game.getImgUrl();
-		this.shortDescription = game.getShortDescription();
+		id = game.getId();
+		title = game.getTitle();
+		year = game.getYear();
+		imgUrl = game.getImgUrl();
+		shortDescription = game.getShortDescription();
+	}
+	
+	public GameMinDTO(GameMinProjection projection) {
+		id = projection.getId();
+		title = projection.getTitle();
+		year = projection.getYear();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
 	}
 
 	public Long getId() {
